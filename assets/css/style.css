@@ -1,11 +1,3 @@
-/**
-* Template Name: Personal
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -939,7 +931,9 @@ section .container {
   right: 0;
   top: 0;
   bottom: 0;
-  overflow-y: auto;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .portfolio-details .container {
@@ -1187,4 +1181,52 @@ section .container {
 
 .credits a:hover {
   color: #fff;
+}
+
+.hide-scrollbar {
+  overflow: hidden;
+  /* Completely hides the scrollbar and content will not be scrollable */
+}
+
+/* Alternatively, to hide the scrollbar but keep the content scrollable */
+.hide-scrollbar-scrollable {
+  overflow: auto;
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}
+
+.hide-scrollbar-scrollable::-webkit-scrollbar {
+  /* For WebKit browsers */
+  display: none;
+}
+
+.btn-callme {
+  background: #18d26e;
+  border: 0;
+  padding: 8px 20px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.btn-resume-download {
+  height: 45px;
+  width: 45px;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #18d26e;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.btn-resume-download:hover {
+  background-color: #aaaaaa;
+  color: white;
+  /* Darker shade on hover */
 }
