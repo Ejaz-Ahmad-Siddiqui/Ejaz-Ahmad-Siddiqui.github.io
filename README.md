@@ -1,56 +1,52 @@
-# Portfolio of Ejaz Ahmad
-
-Welcome to my portfolio! This site showcases my work as a MERN Stack developer with expertise in React, Next.js, Node.js, and more.
-
-## Table of Contents
-
-- [About Me](#about-me)
-- [Projects](#projects)
-- [Skills](#skills)
-- [Contact](#contact)
-
-## About Me
-
-I am a MERN Stack developer with 5 years of experience in building full-stack applications. Currently, I work with React, Next.js, and Node.js. I have a strong passion for developing efficient and scalable web applications, and I enjoy tackling complex technical challenges.
-
-## Projects
-
-### [Project 1: Brisk System](#)
-A cloud based application for managing financial transections, managing inventory, Production and much more.
-
-### [Project 2: Lead Management System](#)
-A comprehensive lead management system with features like lead consolidation, follow-up reminders, and integration with APIs for calls, WhatsApp, and SMS.
-
-### [Project 3: PharmEX DMS](#)
-A cloud-based pharmacy application with modules for managing medicine records, transactions, and ledgers.
-
-### [Project 4: Hospital Management System](#)
-A full-featured hospital management system including modules for IPD, OPD, blood bank management, and patient registration.
-
-
-For a full list of my projects, please visit the [Portfolio](#) section of my portfolio.
-
-## Skills
-
-- **Frontend:** React, Next.js, TypeScript, Redux, Material-UI
-- **Backend:** Node.js, Express,
-- **Database:** MySQL, MongoDB
-- **DevOps:** Deployment on Windows Server IIS, Nginx configuration, AWS
-- **Tools:** Git, Bitbucket, Jira
-
-## Contact
-
-Feel free to reach out to me via:
-
-- **Email:** [iamejaazahmad@gmail.com](mailto:iamejaazahmad@gmail.com)
-- **LinkedIn:** [linkedin.com/in/ejaz-ahmad-siddiqui](https://linkedin.com/in/ejaz-ahmad-siddiqui/)
-- **GitHub:** [github.com/Ejaz-Ahmad-Siddiqui](https://github.com/Ejaz-Ahmad-Siddiqui)
-
+# Ejaz Ahmad · Portfolio
+ 
+Personal portfolio of Ejaz Ahmad, Senior Software Engineer working on design systems and developer tooling with React, Next.js, TypeScript and Node.js.
+ 
+**Live site:** [ejaz-ahmad-siddiqui.github.io](https://ejaz-ahmad-siddiqui.github.io/)
+ 
+## About
+ 
+I build the parts of a frontend that other developers build on: component libraries, project tooling, and the patterns that keep several apps consistent. I've been writing software professionally since 2019, across banking platforms, CRMs, ERP systems and education products.
+ 
+The full list of projects, experience and stack is on the [live site](https://ejaz-ahmad-siddiqui.github.io/).
+ 
+## What's in this repo
+ 
+- **Single-page site** with no build step: one `index.html` with inline CSS and JavaScript
+- **Light and dark themes** that follow the visitor's system preference, with a toggle that remembers their choice
+- **Project detail views** with filters by organization
+- **Contact form** powered by [Formspree](https://formspree.io/)
+- **Downloadable resume** in `assets/resume.pdf`
+- Responsive layout, keyboard navigation and reduced-motion support
+## Structure
+ 
+```
+.
+├── index.html        # The entire site: markup, styles and scripts
+└── assets/
+    └── resume.pdf    # Downloadable resume
+```
+ 
+## Run locally
+ 
+No install needed. Open `index.html` in a browser, or serve the folder to test the contact form:
+ 
+```bash
+npx serve .
+```
+ 
 ## Deployment
+ 
+Deployed with GitHub Pages from the `main` branch. Any push to `main` updates the live site.
+ 
+## Contact
+ 
+- **Email:** [iamejaazahmad@gmail.com](mailto:iamejaazahmad@gmail.com)
+- **LinkedIn:** [linkedin.com/in/ejaz-ahmad-siddiqui](https://www.linkedin.com/in/ejaz-ahmad-siddiqui/)
+- **GitHub:** [github.com/Ejaz-Ahmad-Siddiqui](https://github.com/Ejaz-Ahmad-Siddiqui)
+ 
 
-This portfolio is deployed using GitHub Pages. You can visit the live site [here](https://ejaz-ahmad-siddiqui.github.io/).
 
 
----
 
-Thank you for visiting my portfolio! I look forward to connecting with you.
+
