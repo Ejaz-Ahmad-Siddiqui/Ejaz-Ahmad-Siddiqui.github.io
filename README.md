@@ -12,20 +12,48 @@ The full list of projects, experience and stack is on the [live site](https://ej
  
 ## What's in this repo
  
-- **Single-page site** with no build step: one `index.html` with inline CSS and JavaScript
+- **Single-page site** with no build step: plain HTML, CSS and JavaScript files
 - **Light and dark themes** that follow the visitor's system preference, with a toggle that remembers their choice
 - **Project detail views** with filters by organization
 - **Contact form** powered by [Formspree](https://formspree.io/)
-- **Downloadable resume** in `assets/resume.pdf`
+- **Downloadable resume** in `assets/Ejaz-Ahmad-Resume.pdf`
 - Responsive layout, keyboard navigation and reduced-motion support
 ## Structure
  
 ```
 .
-├── index.html        # The entire site: markup, styles and scripts
+├── index.html              # Page markup (plus a tiny inline theme script to avoid a flash)
+├── css/                    # Styles, loaded in this order
+│   ├── tokens.css          # Color tokens for dark and light themes
+│   ├── base.css            # Reset, typography, layout helpers
+│   ├── header.css          # Sticky header, nav, mobile menu
+│   ├── buttons.css
+│   ├── hero.css
+│   ├── about.css
+│   ├── experience.css      # Timeline
+│   ├── work.css            # Project cards, filters, decorative visuals
+│   ├── panel.css           # Project detail dialog
+│   ├── stack.css
+│   ├── writing.css
+│   ├── contact.css         # Channels and contact form
+│   ├── footer.css
+│   └── utilities.css       # Reveal animation, reduced motion, print
+├── js/
+│   ├── theme.js            # Theme toggle
+│   ├── nav.js              # Mobile menu and active-section highlight
+│   ├── reveal.js           # Reveal-on-scroll
+│   ├── projects.js         # Work filters and project detail panel
+│   ├── contact.js          # Copy email and Formspree form
+│   └── footer.js           # Current year
 └── assets/
-    └── resume.pdf    # Downloadable resume
+    ├── favicon.svg
+    ├── ejaz-ahmad-dark.jpg # Portrait (dark theme)
+    ├── ejaz-ahmad-light.jpg# Portrait (light theme)
+    ├── og-image.png        # Social preview image
+    └── Ejaz-Ahmad-Resume.pdf
 ```
+
+CSS order matters: later files can override earlier ones, so keep the `<link>` order in `index.html` when adding files.
  
 ## Run locally
  

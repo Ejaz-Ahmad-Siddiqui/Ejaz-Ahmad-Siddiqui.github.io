@@ -1,0 +1,40 @@
+/* ---------- Detail panel ---------- */
+dialog.panel{position:fixed;inset:0 0 0 auto;margin:0;padding:0;width:min(640px,100vw);height:100%;max-height:none;max-width:none;border:0;border-left:1px solid var(--line2);background:var(--bg);color:var(--text);box-shadow:var(--shadow);overflow:hidden}
+dialog.panel::backdrop{background:var(--scrim);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+dialog.panel[open]{display:flex;flex-direction:column}
+@media (prefers-reduced-motion: no-preference){
+  dialog.panel[open]{animation:slideIn .28s cubic-bezier(.2,.8,.2,1)}
+  dialog.panel[open]::backdrop{animation:fade .2s ease-out}
+}
+@keyframes slideIn{from{transform:translateX(32px);opacity:0}to{transform:none;opacity:1}}
+@keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.panel-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px 12px 24px;border-bottom:1px solid var(--line);background:var(--bg);flex:none}
+.panel-bar-l{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--faint);min-width:0}
+.panel-bar-r{display:flex;gap:8px}
+.panel-scroll{flex:1;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.panel-vis{height:240px;border-bottom:1px solid var(--line);background-color:var(--sunk);display:flex;align-items:center;justify-content:center;padding:24px}
+.panel-vis .lit{background:var(--accent)!important;border-color:var(--accent)!important}
+.panel-content{padding:32px 28px 48px;display:flex;flex-direction:column;gap:32px}
+.panel-content h2{font-size:clamp(28px,4vw,36px);font-weight:700;letter-spacing:-.03em}
+.kv{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.kv div{padding:14px 18px;display:flex;flex-direction:column;gap:6px}
+.kv div+div{border-left:1px solid var(--line)}
+.kv dt{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em}
+.kv dd{margin:0;font-size:14.5px;line-height:1.5}
+.blk{display:flex;flex-direction:column;gap:14px}
+.blk h3{font:500 12px 'IBM Plex Mono',monospace;color:var(--accent-text);letter-spacing:.06em;text-transform:uppercase}
+.blk>p{font-size:17px;line-height:1.7;color:var(--muted)}
+.panel .tags li{font-size:12.5px;padding:5px 10px;color:var(--text)}
+.handle{display:none}
+@media (max-width:640px){
+  dialog.panel{inset:auto 0 0 0;width:100vw;height:92dvh;height:92vh;border-left:0;border-top:1px solid var(--line2);border-radius:20px 20px 0 0}
+  @supports (height:92dvh){dialog.panel{height:92dvh}}
+  @media (prefers-reduced-motion: no-preference){dialog.panel[open]{animation:slideUp .3s cubic-bezier(.2,.8,.2,1)}}
+  .handle{display:block;width:40px;height:4px;border-radius:2px;background:var(--line2);margin:8px auto 0}
+  .panel-bar{padding:6px 10px 10px 20px}
+  .panel-vis{height:auto;min-height:200px;padding:22px 18px}
+  .panel-content{padding:26px 20px calc(40px + env(safe-area-inset-bottom))}
+  .kv{grid-template-columns:1fr}
+  .kv div+div{border-left:0;border-top:1px solid var(--line)}
+}

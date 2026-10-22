@@ -1,0 +1,25 @@
+/* ---------- Experience ---------- */
+.tl{list-style:none;position:relative}
+.tl-item{display:grid;grid-template-columns:200px 32px minmax(0,1fr);grid-template-areas:"date rail body";column-gap:24px;padding-bottom:56px;position:relative}
+.tl-item:last-child{padding-bottom:0}
+.tl-date{grid-area:date;font-size:13px;color:var(--muted);padding-top:3px;line-height:1.5}
+.tl-date b{display:block;font-weight:400;color:var(--faint);font-size:12px;margin-top:4px}
+.tl-rail{grid-area:rail;position:relative;display:flex;justify-content:center}
+.tl-rail::before{content:"";position:absolute;top:22px;bottom:-56px;left:50%;width:1px;background:var(--line2);transform:translateX(-.5px)}
+.tl-item:last-child .tl-rail::before{display:none}
+.tl-node{width:16px;height:16px;border-radius:4px;background:var(--tile2);border:1px solid var(--line2);margin-top:4px;position:relative;z-index:1}
+.tl-item.now .tl-node{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 5px var(--accent-soft)}
+.tl-item.sub .tl-node{width:10px;height:10px;border-radius:3px;margin-top:7px}
+.tl-body{grid-area:body;display:flex;flex-direction:column;gap:10px;max-width:70ch}
+.tl-body h3{font-size:clamp(20px,2vw,24px)}
+.tl-org{font-size:13px;color:var(--muted)}
+.tl-org .tag-now{display:inline-flex;align-items:center;gap:6px;margin-left:10px;padding:2px 8px;border:1px solid var(--accent);border-radius:999px;color:var(--accent-text);font-size:11px;background:var(--accent-soft)}
+.bullets{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.bullets li{position:relative;padding-left:22px;color:var(--muted);font-size:16px;line-height:1.6}
+.bullets li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:2px;background:var(--tile2);border:1px solid var(--line2)}
+@media (max-width:760px){
+  .tl-item{grid-template-columns:24px minmax(0,1fr);grid-template-areas:"rail date" "rail body";column-gap:16px;padding-bottom:44px}
+  .tl-rail::before{bottom:-44px}
+  .tl-date{margin-bottom:8px}
+  .tl-date b{display:inline;margin:0 0 0 8px}
+}

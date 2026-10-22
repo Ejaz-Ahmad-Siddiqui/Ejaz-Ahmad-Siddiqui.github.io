@@ -1,0 +1,7 @@
+/* ---------- Stack ---------- */
+.stack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:16px}
+.stack-group{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:22px;display:flex;flex-direction:column;gap:16px}
+.stack-group h3{display:flex;align-items:center;gap:10px;font:500 12px 'IBM Plex Mono',monospace;color:var(--faint);letter-spacing:.08em;text-transform:uppercase}
+.stack-group h3::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--tile2);border:1px solid var(--line2)}
+.stack-group.key h3::before{background:var(--accent);border-color:var(--accent)}
+.stack-group .tags li{font-size:13px;padding:6px 10px;color:var(--text);background:var(--sunk)}

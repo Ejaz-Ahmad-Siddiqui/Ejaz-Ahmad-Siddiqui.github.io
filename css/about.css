@@ -1,0 +1,13 @@
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:64px}
+.about-side{display:flex;flex-direction:column;gap:32px}
+.facts{margin:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line);font-size:13px}
+.facts div:last-child{border-bottom:0}
+.facts dt{color:var(--faint)}
+.facts dd{margin:0;text-align:right}
+.about-copy{display:flex;flex-direction:column;gap:24px;max-width:62ch}
+.about-copy .lead{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,2.4vw,28px);line-height:1.35;letter-spacing:-.015em;color:var(--text);font-weight:500}
+.about-copy p{font-size:17.5px;line-height:1.75;color:var(--muted)}
+.about-copy strong{color:var(--text);font-weight:500}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:40px}}

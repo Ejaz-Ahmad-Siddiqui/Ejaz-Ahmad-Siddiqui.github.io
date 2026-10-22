@@ -1,0 +1,7 @@
+/* ---------- Footer ---------- */
+.site-footer{border-top:1px solid var(--line);padding:40px 0 calc(40px + env(safe-area-inset-bottom))}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.foot-l{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--muted)}
+.foot-links{display:flex;flex-wrap:wrap;gap:4px;list-style:none}
+.foot-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;font-size:13px;color:var(--muted);text-decoration:none;border-radius:8px}
+.foot-links a:hover{color:var(--text);background:var(--tile)}
